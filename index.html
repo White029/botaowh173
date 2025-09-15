@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>botao</title>
+<style>
+  body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 50px;
+  background-color: lightblue;
+  transition: background 0.5s;
+}
+  button {
+ padding: 10px 20px;
+ font-size: 16px;
+ border: none;
+ border-radius: 20px;
+ cursor: pointer;
+ background-color: darkblue;
+ color: white;
+}   
+</style>
+</head>
+<body>
+  <h1>teste de botao </h1>
+  <p>Clique no botao para mudar a cor de fundo</p>
+  <button id="meubotao">clique aqui</button>
+
+  <script>
+    const botao = document.getElementById("meubotao");
+    let corAtual = false; 
+
+    botao.addEventListener("click", function () {
+      if(corAtual) {
+        document.body.style.backgroundColor = "lightblue"
+
+      } else {
+        document.body.style.backgroundColor = "lightgreen"
+      }   
+      corAtual = !corAtual;
+
+    });
+    </script>
+    
+</body>
+</html>
